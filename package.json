@@ -2,6 +2,7 @@
   "name": "simple-ecommerce",
   "version": "0.1.0",
   "author": "Muhammad Nasrurrohman <anas@jurnalanas.com>",
+  "description": "a simple, mobile web first e-commerce built in react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -14,7 +15,10 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,6 +39,9 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "prettier": "^2.0.2",
     "tailwindcss": "^1.2.0"
   }
 }
