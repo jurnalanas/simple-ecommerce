@@ -1,21 +1,23 @@
 import React from 'react';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  faCoffee,
+  faHeart,
+  faAngleLeft
 } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 library.add(
-  faCoffee
+  faHeart,
+  faAngleLeft
 );
 
 const Navbar = () => {
   return (
     <nav className="bg-teal-500 p-4">
       <div className="max-w-xl mx-auto flex">
-        <div className="mx-2 px-1">
-          <FontAwesomeIcon icon={faCoffee} size="2x" />
+        <div className="mx-2 px-1 m-auto">
+          <FontAwesomeIcon icon={faAngleLeft} size="2x" />
         </div>
         <input
           type="search"

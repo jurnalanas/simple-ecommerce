@@ -2,14 +2,13 @@ import React from 'react';
 
 const CardsLarge = () => {
   return (
-    <div className="w-full p-3">
-      <div className="bg-white border rounded shadow">
-        <div className="border-b p-3">
-          <h5 className="font-bold uppercase text-gray-600">Product</h5>
-        </div>
-        <div className="p-5">
-          <canvas id="chartjs-0" className="chartjs" width="undefined" height="undefined" />
-        </div>
+    <div className="m-3 overflow-hidden rounded w-full">
+      <img className="w-full" src="https://tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />
+      <div className="px-6 py-4 bg-white">
+        <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p className="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
       </div>
     </div>
   )
