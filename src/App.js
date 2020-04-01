@@ -1,20 +1,21 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
-import logo from "./logo.svg";
+import Navbar from "./components/Navbar";
+import Contents from "./components/Contents";
+import FloatingBar from "./components/FloatingBar";
 
 function App() {
   return (
-    <div className="max-w-sm mx-auto flex p-6 bg-white rounded-lg shadow-xl">
-      <div className="flex-shrink-0">
-        <img className="h-12 w-12" src={logo} alt="ChitChat Logo" />
+    <>
+      <div className="bg-gray-200 h-screen">
+        <Navbar />
+        <div className="container max-w-xl mx-auto">
+          <div className="px-4 mb-16 text-gray-800 leading-normal w-">
+            <Contents />
+          </div>
+        </div>
+        <FloatingBar/>
       </div>
-      <div className="ml-6 pt-1">
-        <h4 className="text-xl text-gray-900 leading-tight">ChitChat</h4>
-        <p className="text-base text-gray-600 leading-normal">
-          You have a new message!
-        </p>
-      </div>
-    </div>
+    </>
   );
 }
 
