@@ -5,6 +5,14 @@ const Contents = () => {
   return (
     <div className="flex flex-row flex-wrap flex-grow mt-2">
       <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
+      <CardsLarge/>
     </div>
   )
 }

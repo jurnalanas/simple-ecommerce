@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = () => {
   return (
     <nav className="bg-teal-500 p-4">
-      <div className="flex">
+      <div className="max-w-xl mx-auto flex">
         <div className="mx-2 px-1 bg-white border-solid border-1">
           <span>prev</span>
         </div>

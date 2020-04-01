@@ -2,11 +2,13 @@ import React from 'react';
 
 const FloatingBar = () => {
   return (
-    <div className="bg-teal-500 p-4 absolute w-full bottom-0 flex flex-wrap items-center content-between">
-      <div>loremp</div>
-      <div>loremp</div>
-      <div>loremp</div>
-      <div>loremp</div>
+    <div className="fixed bg-teal-500 bottom-0 mx-auto p-4 w-full">
+      <div className="align-center flex flex-wrap font-bold items-center justify-center m-auto max-w-xl text-white">
+        <div className="flex-1 text-center cursor-pointer">Home</div>
+        <div className="flex-1 text-center cursor-pointer">Feed</div>
+        <div className="flex-1 text-center cursor-pointer">Cart</div>
+        <div className="flex-1 text-center cursor-pointer">Profile</div>
+      </div>
     </div>
   )
 }

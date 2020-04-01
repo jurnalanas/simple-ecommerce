@@ -6,14 +6,14 @@ import FloatingBar from "./components/FloatingBar";
 function App() {
   return (
     <>
-      <div className="bg-gray-200 h-screen">
+      <div>
         <Navbar />
         <div className="container max-w-xl mx-auto">
           <div className="px-4 mb-16 text-gray-800 leading-normal w-">
             <Contents />
           </div>
         </div>
-        <FloatingBar/>
+      <FloatingBar/>
       </div>
     </>
   );
