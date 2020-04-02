@@ -58,5 +58,6 @@ This project is licensed under the MIT License - see the [LICENSE](/LICENSE) fil
 
 ## TODO
 
-- [ ] incorporate redux (currently using useContext as state management for auth flow)
+- [ ] Considering redux (?) (currently using useContext as state management for auth flow)
 - [ ] e2e tests
+- [ ] unit tests
