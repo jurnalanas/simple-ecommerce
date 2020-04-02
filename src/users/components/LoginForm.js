@@ -17,7 +17,9 @@ const LoginForm = () => {
                     <input type="text" name="password" className="block w-full p-3 rounded bg-gray-200 border border-transparent focus:outline-none" />
                 </div>
 
-                <button className="w-full p-3 mt-4 bg-indigo-600 text-white rounded shadow">Login</button>
+                <button className="w-1/3 float-right p-3 mt-4 bg-teal-500 text-white rounded shadow my-6">Sign In</button>
+                <button className="w-full p-3 mt-4 bg-blue-500 text-white rounded shadow">Sign In with Facebook</button>
+                <button className="w-full p-3 mt-4 bg-green-700 text-white rounded shadow">Sign In with Google</button>
             </form>
         </div>
     </div>

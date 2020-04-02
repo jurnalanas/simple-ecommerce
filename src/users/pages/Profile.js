@@ -64,6 +64,7 @@ const Profile = () => {
       <div>
         <Navbar />
         <div className="container max-w-lg mx-auto my-2">
+          <h2 className="font-bold text-2xl m-4">Purchased History</h2>
           <div className="px-4 mb-16 text-gray-800 leading-normal w-full">
             {!isLoading && loadedData.map(item => (
               <CartItem
