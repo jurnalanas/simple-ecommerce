@@ -52,7 +52,8 @@ const Navbar = () => {
             type="search"
             className="w-full bg-purple-white shadow rounded border-0 p-2"
             placeholder="Search by name..."
-            onChange={searchData && openDrawerHandler}
+            onKeyDownCapture={searchData}
+            onChange={openDrawerHandler}
           />
           <button className="m-auto px-1 text-right text-sm w-1/6" onClick={auth.logout}>
             Log Out

@@ -13,7 +13,10 @@ const PageDrawer = props => {
     >
     <div className="absolute bg-white z-10 h-screen w-full">
       <div className="container mx-auto px-4 mb-16 text-gray-800 leading-normal w-full max-w-xl mx-auto my-3">
-        {props.items.map((item) => (
+        {!props.items.length &&
+          <div className="text-center">Products not available.</div>
+        }
+        {props.items.length > 0 && props.items.map((item) => (
           <CardsSmall
             key={item.id}
             id={item.id}
