@@ -4,7 +4,7 @@ import {
   faHeart,
   faAngleLeft
 } from "@fortawesome/free-solid-svg-icons";
-import CardsSmall from "../UIElements/CardsSmall";
+import PageDrawer from "../UIElements/PageDrawer";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -16,8 +16,8 @@ library.add(
 const Navbar = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
-  const openDrawerHandler = () => {
-    setDrawerIsOpen(!drawerIsOpen);
+  const openDrawerHandler = (e) => {
+    setDrawerIsOpen(e.target.value.length > 0)
   };
 
   return (
@@ -31,11 +31,11 @@ const Navbar = () => {
             type="search"
             className="w-full bg-purple-white shadow rounded border-0 p-2"
             placeholder="Search by name..."
-            onKeyUp={openDrawerHandler}
+            onChange={openDrawerHandler}
           />
         </div>
       </nav>
-      <CardsSmall show={drawerIsOpen} />
+      <PageDrawer show={drawerIsOpen} />
     </>
   );
 }
