@@ -57,7 +57,7 @@ const Profile = () => {
       } catch (err) {}
     };
     fetchProducts()
-  }, [productId])
+  }, [sendRequest, productId])
 
   if (loadedData) {
     return (
