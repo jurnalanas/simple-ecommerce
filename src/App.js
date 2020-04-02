@@ -27,6 +27,9 @@ const App = () => {
         <Route path="/profile" exact>
           <Profile/>
         </Route>
+        <Route path="/profile/add/:productId" exact>
+          <Profile/>
+        </Route>
         <Redirect to ="/" />
       </Switch>
     </Router>

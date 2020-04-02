@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { useHttpClient } from '../../shared/hooks/http-hook';
-import localforage from 'localforage';
 
 import Navbar from "../../shared/components/Navigation/Navbar";
 import FloatingBar from "../../shared/components/Navigation/FloatingBar";
@@ -17,16 +16,6 @@ const Product = () => {
   const [loadedItem, setLoadedItem] = useState();
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
-  const initSet = async () => {
-    try {
-        const value = await localforage.getItem('d');
-        console.log(value);
-    } catch (err) {
-        console.log(err);
-    }
-  }
-  initSet()
-
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -35,7 +24,7 @@ const Product = () => {
         const searchItem = await products['productPromo'].filter((item) => {
           return item.id === productId
         })
-        setLoadedItem(searchItem[0]);
+        setLoadedItem(searchItem[0] || null);
       } catch (err) {}
     };
     fetchProduct();
