@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ProductItem from './ProductItem';
+import { AuthContext } from '../../shared/context/auth-context';
 
-const ProductList = props => {
-  if (props.items.length === 0) {
+const ProductList = () => {
+  const auth = useContext(AuthContext);
+  if (auth.products.length < 1) {
     return (
       <div>
         <h2>No Products found</h2>
@@ -12,7 +14,7 @@ const ProductList = props => {
 
   return (
     <>
-      {props.items.map(product => (
+      {auth.products.map(product => (
         <ProductItem
           key={product.id}
           id={product.id}

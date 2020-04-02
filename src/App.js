@@ -12,6 +12,8 @@ import Login from './users/pages/Login.js';
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState(false);
+  const [products, setProducts] = useState();
+  const [categories, setCategories] = useState();
 
 
   const login = useCallback(uid => {
@@ -23,6 +25,14 @@ const App = () => {
     setIsLoggedIn(false);
     setUserId(null);
   }, []);
+
+  const updateProducts = useCallback(products => {
+    setProducts(products)
+  }, [])
+
+  const updateCategories = useCallback(categories => {
+    setCategories(categories)
+  }, [])
 
   let routes;
 
@@ -67,7 +77,16 @@ const App = () => {
 
   return (
     <AuthContext.Provider
-      value={{ isLoggedIn: isLoggedIn, login: login, logout: logout, userId: userId }}
+      value={{
+        isLoggedIn: isLoggedIn,
+        login: login,
+        logout: logout,
+        userId: userId,
+        updateProducts: updateProducts,
+        products: products,
+        updateCategories: updateCategories,
+        categories: categories
+      }}
     >
     <Router>
       {routes}

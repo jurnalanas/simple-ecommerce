@@ -19,7 +19,6 @@ library.add(
 const Navbar = () => {
   const auth = useContext(AuthContext);
   let history = useHistory();
-  console.log(auth.isLoggedIn)
   const [mockData, setMockData] = useState(jsonData);
   const [isDrawerOpen, setDrawerIsOpen] = useState(false)
 

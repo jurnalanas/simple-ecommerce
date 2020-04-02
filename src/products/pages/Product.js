@@ -4,7 +4,6 @@ import { useHttpClient } from '../../shared/hooks/http-hook';
 
 import Navbar from "../../shared/components/Navigation/Navbar";
 import FloatingBar from "../../shared/components/Navigation/FloatingBar";
-import CategoriesComponent from "../../shared/components/UIElements/Categories";
 
 import ProductDetail from '../components/ProductDetail';
 import ErrorModal from '../../shared/components/UIElements/ErrorModal';
@@ -35,7 +34,6 @@ const Product = () => {
       <>
         <div>
           <Navbar />
-          <CategoriesComponent/>
           {isLoading && (
             <div className="text-center flex justify-center content-center">
               <LoadingSpinner />
@@ -65,7 +63,6 @@ const Product = () => {
       <>
         <div>
           <Navbar />
-          <CategoriesComponent/>
           {isLoading && (
             <div className="text-center flex justify-center content-center">
               <LoadingSpinner />
