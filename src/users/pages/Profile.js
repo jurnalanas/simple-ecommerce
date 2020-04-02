@@ -4,6 +4,7 @@ import Navbar from "../../shared/components/Navigation/Navbar";
 import { useHttpClient } from '../../shared/hooks/http-hook';
 import FloatingBar from "../../shared/components/Navigation/FloatingBar";
 import CartItem from "../components/CartItem";
+import mockData from "../../shared/util/mockData";
 
 let data = [];
 
@@ -40,16 +41,13 @@ const Profile = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const responseData = await sendRequest(process.env.REACT_APP_API_HOST);
-        const products = await responseData[0]['data'];
-
         let localData = await loadData();
         if (productId) {
           localData = await saveData(productId)
         }
         const idProducts = await localData['list'];
         const setProduct = [...new Set(idProducts)]
-        const searchItems = await products['productPromo'].filter((item) => {
+        const searchItems = await mockData.filter((item) => {
           return setProduct.includes(item.id)
         })
 
