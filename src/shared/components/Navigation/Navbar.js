@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useHistory } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { AuthContext } from '../../context/auth-context';
 import {
   faHeart,
   faAngleLeft
@@ -16,7 +17,9 @@ library.add(
 );
 
 const Navbar = () => {
+  const auth = useContext(AuthContext);
   let history = useHistory();
+  console.log(auth.isLoggedIn)
   const [mockData, setMockData] = useState(jsonData);
   const [isDrawerOpen, setDrawerIsOpen] = useState(false)
 
@@ -52,6 +55,9 @@ const Navbar = () => {
             placeholder="Search by name..."
             onChange={searchData && openDrawerHandler}
           />
+          <button className="m-auto px-1 text-right text-sm w-1/6" onClick={auth.logout}>
+            Log Out
+          </button>
         </div>
       </nav>
       <PageDrawer show={isDrawerOpen} items={mockData} />
