@@ -67,13 +67,13 @@ const Profile = () => {
           <div className="px-4 mb-16 text-gray-800 leading-normal w-full">
             {!isLoading && loadedData.map(item => (
               <CartItem
-                  key={item.id}
-                  id={item.id}
-                  title={item.title}
-                  price={item.price}
-                  loved={item.loved}
-                  description={item.description}
-                  image={item.imageUrl}
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                price={item.price}
+                loved={item.loved}
+                description={item.description}
+                image={item.imageUrl}
               />
             ))}
           </div>

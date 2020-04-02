@@ -12,8 +12,18 @@ const PageDrawer = props => {
       unmountOnExit
     >
     <div className="absolute bg-white z-10 h-screen w-full">
-      <div className="container mx-auto px-4 mb-16 text-gray-800 leading-normal w-full flex max-w-xl mx-auto my-3 w-full">
-        <CardsSmall />
+      <div className="container mx-auto px-4 mb-16 text-gray-800 leading-normal w-full max-w-xl mx-auto my-3">
+        {props.items.map((item) => (
+          <CardsSmall
+            key={item.id}
+            id={item.id}
+            title={item.title}
+            price={item.price}
+            loved={item.loved}
+            description={item.description}
+            image={item.imageUrl}
+          />
+        ))}
       </div>
     </div>
   </CSSTransition>

@@ -6,6 +6,7 @@ import {
   faAngleLeft
 } from "@fortawesome/free-solid-svg-icons";
 import PageDrawer from "../UIElements/PageDrawer";
+import jsonData from "../../util/mockData";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -16,9 +17,24 @@ library.add(
 
 const Navbar = () => {
   let history = useHistory();
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+  const [mockData, setMockData] = useState(jsonData);
+  const [isDrawerOpen, setDrawerIsOpen] = useState(false)
 
-  // TODO: useRef instead
+  const searchData = (e) => {
+    let queryData = [];
+    console.log(jsonData)
+    if (e.target.value !== '') {
+      jsonData.forEach(item => {
+        if (item['title'].toLowerCase().indexOf(e.target.value) !== -1) {
+          if (queryData.length < 10) {
+            queryData.push(item)
+          }
+        }
+      })
+    }
+    setMockData(queryData);
+  }
+
   const openDrawerHandler = (e) => {
     setDrawerIsOpen(e.target.value.length > 0)
   };
@@ -34,11 +50,11 @@ const Navbar = () => {
             type="search"
             className="w-full bg-purple-white shadow rounded border-0 p-2"
             placeholder="Search by name..."
-            onChange={openDrawerHandler}
+            onChange={searchData && openDrawerHandler}
           />
         </div>
       </nav>
-      <PageDrawer show={drawerIsOpen} />
+      <PageDrawer show={isDrawerOpen} items={mockData} />
     </>
   );
 }
