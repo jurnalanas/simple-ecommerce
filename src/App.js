@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 
 import Home from './products/pages/Home';
 import Products from './products/pages/Products';
+import Login from './users/pages/Login.js';
 
 
 const App = () => {
@@ -14,6 +15,9 @@ const App = () => {
         </Route>
         <Route path="/products" exact>
           <Products/>
+        </Route>
+        <Route path="/login" exact>
+          <Login/>
         </Route>
         <Redirect to ="/" />
       </Switch>
