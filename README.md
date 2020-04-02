@@ -54,3 +54,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
+
+## TODO
+
+- [ ] incorporate redux (currently using useContext as state management for auth flow)
+- [ ] e2e tests
