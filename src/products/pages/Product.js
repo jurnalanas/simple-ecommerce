@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import { useHttpClient } from '../../shared/hooks/http-hook';
+import localforage from 'localforage';
+
 import Navbar from "../../shared/components/Navigation/Navbar";
 import FloatingBar from "../../shared/components/Navigation/FloatingBar";
 import CategoriesComponent from "../../shared/components/UIElements/Categories";
@@ -7,13 +10,22 @@ import CategoriesComponent from "../../shared/components/UIElements/Categories";
 import ProductDetail from '../components/ProductDetail';
 import ErrorModal from '../../shared/components/UIElements/ErrorModal';
 import LoadingSpinner from '../../shared/components/UIElements/LoadingSpinner';
-import { useHttpClient } from '../../shared/hooks/http-hook';
 
 
 const Product = () => {
   const productId = useParams().productId;
   const [loadedItem, setLoadedItem] = useState();
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
+
+  const initSet = async () => {
+    try {
+        const value = await localforage.getItem('d');
+        console.log(value);
+    } catch (err) {
+        console.log(err);
+    }
+  }
+  initSet()
 
   useEffect(() => {
     const fetchProduct = async () => {

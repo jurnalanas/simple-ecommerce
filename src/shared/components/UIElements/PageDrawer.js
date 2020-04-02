@@ -12,7 +12,9 @@ const PageDrawer = props => {
       unmountOnExit
     >
     <div className="absolute bg-white z-10 h-screen w-full">
-      <CardsSmall/>
+      <div className="container mx-auto px-4 mb-16 text-gray-800 leading-normal w-full flex max-w-xl mx-auto my-3 w-full">
+        <CardsSmall />
+      </div>
     </div>
   </CSSTransition>
   )

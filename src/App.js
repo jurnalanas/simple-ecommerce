@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import Home from './products/pages/Home';
 import Products from './products/pages/Products';
 import Product from './products/pages/Product';
+import Profile from './users/pages/Profile.js';
 import Login from './users/pages/Login.js';
 
 
@@ -22,6 +23,9 @@ const App = () => {
         </Route>
         <Route path="/login" exact>
           <Login/>
+        </Route>
+        <Route path="/profile" exact>
+          <Profile/>
         </Route>
         <Redirect to ="/" />
       </Switch>
