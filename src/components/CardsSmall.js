@@ -2,7 +2,7 @@ import React from 'react';
 
 const CardsSmall = () => {
   return (
-    <div className="flex max-w-full">
+    <div className="flex w-full">
       <div className="bg-cover flex-none lg:rounded-l overflow-hidden text-center w-1/3" style={{backgroundImage: 'url(https://tailwindcss.com/img/card-left.jpg)'}} title="Woman holding a mug">
       </div>
       <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
