@@ -13,7 +13,7 @@ const FloatingBar = () => {
         </div>
         <div className="flex-1 text-center cursor-pointer">
           <Link
-            to="/Products"
+            to="/products"
             className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
           >Feed</Link>
         </div>
@@ -25,7 +25,7 @@ const FloatingBar = () => {
         </div>
         <div className="flex-1 text-center cursor-pointer">
           <Link
-            to="/Products"
+            to="/profile"
             className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
           >Profile</Link>
         </div>

@@ -16,6 +16,7 @@ library.add(
 const Navbar = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
+  // TODO: useRef instead
   const openDrawerHandler = (e) => {
     setDrawerIsOpen(e.target.value.length > 0)
   };
