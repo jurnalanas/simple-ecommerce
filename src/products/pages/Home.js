@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import FloatingBar from "../../components/FloatingBar";
+import Navbar from "../../shared/components/Navigation/Navbar";
+import FloatingBar from "../../shared/components/Navigation/FloatingBar";
 
 const Home = () => {
   return (

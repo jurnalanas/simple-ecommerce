@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Contents from "../../components/Contents";
-import FloatingBar from "../../components/FloatingBar";
-import CategoriesComponent from "../../components/Categories";
+import Navbar from "../../shared/components/Navigation/Navbar";
+import Contents from "../components/Contents";
+import FloatingBar from "../../shared/components/Navigation/FloatingBar";
+import CategoriesComponent from "../../shared/components/UIElements/Categories";
 
 function Products() {
   return (
