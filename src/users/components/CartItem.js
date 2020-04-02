@@ -14,6 +14,7 @@ const CartItem = props => {
           <div className="mb-8">
             <div className="text-gray-900 font-bold text-xl mb-2">{props.title}</div>
             <p className="text-gray-700 text-base truncate max-w-xs">{props.description}</p>
+            <p className="font-bold max-w-xs my-1 text-base">{props.price}</p>
           </div>
         </div>
       </div>
