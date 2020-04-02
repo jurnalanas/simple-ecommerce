@@ -2,7 +2,7 @@
 
 A simple mobile web ecommerce built in pure react.
 
-![home](/screenshots/products.png)
+Live version: [https://simple-ecommerce.netlify.com](https://simple-ecommerce.netlify.com/)
 
 ## Setup
 
@@ -43,10 +43,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Screenshots
 
-![home](/screenshots/login.png)
-![post](/screenshots/product-detail.png)
-![auth](/screenshots/profile.png)
-![mobile](/screenshots/search-drawer.png)
+![login](/screenshots/login.png)
+![products](/screenshots/products.png)
+![product detail](/screenshots/product-detail.png)
+![profile](/screenshots/profile.png)
+![side drawer](/screenshots/search-drawer.png)
 
 
 ## Author
