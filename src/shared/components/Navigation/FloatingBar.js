@@ -9,6 +9,7 @@ const FloatingBar = () => {
           <Link
             to="/"
             className="text-gray-800 text-sm font-semibold hover:text-purple-600 mr-4"
+            data-testid="home"
           >Home</Link>
         </div>
         <div className="flex-1 text-center cursor-pointer">
