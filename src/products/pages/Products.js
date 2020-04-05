@@ -27,7 +27,7 @@ function Products() {
       } catch (err) {}
     };
     fetchProducts();
-  }, [sendRequest]);
+  }, [sendRequest, auth]);
 
   if (dataFetched) {
     return (

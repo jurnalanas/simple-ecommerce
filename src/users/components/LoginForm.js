@@ -128,7 +128,10 @@ const LoginForm = () => {
                 className="w-1/3 float-right p-3 mt-4 bg-teal-500 text-white rounded shadow my-6"
                 disabled={!formState.isValid}
               >{isLoginMode ? 'LOGIN' : 'SIGNUP'}</button>
-              <button className="w-full p-3 mt-4 bg-blue-500 text-white rounded shadow">{isLoginMode ? 'LOGIN' : 'SIGNUP'} with Facebook</button>
+              <button
+                className="w-full p-3 mt-4 bg-blue-500 text-white rounded shadow"
+                data-testid="facebook"
+              >{isLoginMode ? 'LOGIN' : 'SIGNUP'} with Facebook</button>
               <button className="w-full p-3 mt-4 bg-green-700 text-white rounded shadow">{isLoginMode ? 'LOGIN' : 'SIGNUP'} with Google</button>
             </form>
             <button

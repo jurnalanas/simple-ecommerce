@@ -11,7 +11,7 @@
   "rules": {
     "react/prop-types": 0
   },
-  "plugins": ["react", "import", "jsx-a11y", "jest"],
+  "plugins": ["react", "import", "jsx-a11y", "jest", "eslint-plugin-cypress"],
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
@@ -23,7 +23,8 @@
     "es6": true,
     "browser": true,
     "jest": true,
-    "node": true
+    "node": true,
+    "cypress/globals": true
   },
   "settings": {
     "react": {
